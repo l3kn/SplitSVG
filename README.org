@@ -1,0 +1,26 @@
+* SplitSvg
+When using together with inkscape,
+export svg images via "File" -> "Save As"
+and select "Plain SVG" as file type.
+
+Images are processed in five steps
+
+1. ~fill~ and ~stroke~ attributes stored in ~style~ are extracted and stored directly on the element
+2. Colors are converted to lowercase,
+   named colors (e.g. "red") are converted to hex colors.
+3. All fill and stroke colors appearing in the image are collected into a list
+4. For each color, a copy of the image is created
+   and all elements with a different color are removed.
+   The image is then saved in a file named ~color_#abcdef.svg~
+   where ~#abcdef~ is the color used.
+5. If an element has different ~fill~ and ~stroke~ colors,
+   when exporting the image for one of them,
+   the other is set to ~"none"~.
+   
+Usage: ~python svg.py input.svg~
+* TODO
+** Operations
+- list colors
+- remove color
+- remove everything but one color
+- split colors into layers
