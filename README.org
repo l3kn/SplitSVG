@@ -25,3 +25,6 @@ Usage: ~python svg.py input.svg~
 - remove color
 - remove everything but one color
 - split colors into layers
+
+* Credits
+I copied the list of named colors from the [[http://wiki.inkscape.org/wiki/index.php/Python_modules_for_extensions][Inkscape extension python modules]].
