@@ -18,7 +18,8 @@ Images are processed in five steps
    the other is set to ~none~.
    
 Usage: ~python svg.py input.svg~
-* TODO
+
+* TODOs
 ** Operations
 - list colors
 - remove color
